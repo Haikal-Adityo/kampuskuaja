@@ -5,15 +5,15 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('assets/images/logo-kampuskuaja-icon.png') }}" alt="{{ config('app.name') }}" class="h-16 p-2">
+                    </a>                    
+                </div>                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('registrasi')" :active="request()->routeIs('registrasi')">
+                        {{ __('Registrasi Beasiswa') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -34,10 +34,6 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -67,8 +63,8 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('registrasi')" :active="request()->routeIs('registrasi')">
+                {{ __('registrasi') }}
             </x-responsive-nav-link>
         </div>
 
