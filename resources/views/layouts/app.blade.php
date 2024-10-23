@@ -12,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
 
         <!-- Bootstrap CSS -->
-        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/1iB9d6vM4fxgB5YIhpaW48DQxM8H9GRX0R8R6Z5" crossorigin="anonymous"> --}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/1iB9d6vM4fxgB5YIhpaW48DQxM8H9GRX0R8R6Z5" crossorigin="anonymous">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMo2lW+JhJw1ccUmAKzG6T5h6Dsi3EJ1a9gH2E" crossorigin="anonymous">
