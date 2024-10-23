@@ -21,8 +21,8 @@ class MahasiswaSeeder extends Seeder
             'semester' => 5,
             'ipk' => 3.75,
             'berkas_syarat' => null,
-            'status_ajuan' => 'Belum Diajukan',
-            'beasiswa' => null,
+            'beasiswa_id' => null,
+            'status_ajuan_id' => 1,
         ]);
 
         Mahasiswa::create([
@@ -33,8 +33,8 @@ class MahasiswaSeeder extends Seeder
             'semester' => 3,
             'ipk' => 2.8,
             'berkas_syarat' => null,
-            'status_ajuan' => 'Belum Diajukan',
-            'beasiswa' => null,
+            'beasiswa_id' => null,
+            'status_ajuan_id' => 1,
         ]);
 
     }

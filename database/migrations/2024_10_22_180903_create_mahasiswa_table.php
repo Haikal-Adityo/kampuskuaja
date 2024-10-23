@@ -23,8 +23,8 @@ return new class extends Migration
             $table->decimal('ipk', 3, 2);
             $table->string('berkas_syarat')->nullable();
             $table->string('original_berkas')->nullable();
-            $table->string('status_ajuan')->nullable();
-            $table->foreignId('beasiswa')->nullable()->constrained('beasiswa');
+            $table->foreignId('status_ajuan_id')->nullable()->constrained('status_ajuan');
+            $table->foreignId('beasiswa_id')->nullable()->constrained('beasiswa');
             $table->timestamps();
         });        
     }
