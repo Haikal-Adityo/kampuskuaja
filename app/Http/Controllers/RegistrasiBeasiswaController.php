@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Beasiswa;
-use App\Models\Mahasiswa; // Import the Mahasiswa model
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
@@ -11,13 +11,14 @@ class RegistrasiBeasiswaController extends Controller
 {
     public function index()
     {
-        // Get the authenticated Mahasiswa
-        $mahasiswa = Auth::user(); // This will get the authenticated Mahasiswa
+        $mahasiswa = Auth::user();
 
-        // Fetch all scholarships from the database
+        if ($mahasiswa->status_ajuan_id == 2) {
+            return redirect()->route('hasil');
+        }
+        
         $beasiswaList = Beasiswa::all();
 
-        // Pass the Mahasiswa and Beasiswa list to the view
         return view('registrasi', compact('mahasiswa', 'beasiswaList'));
     }
 
@@ -45,20 +46,16 @@ class RegistrasiBeasiswaController extends Controller
         $mahasiswa->email = $validatedData['email'];
         $mahasiswa->nomor_hp = $validatedData['nomor_hp'];
         $mahasiswa->semester = $validatedData['semester'];
-        $mahasiswa->beasiswa = $validatedData['pilihan_beasiswa'];
+        $mahasiswa->beasiswa_id = $validatedData['pilihan_beasiswa'];
         $mahasiswa->berkas_syarat = $validatedData['berkas_syarat'];
         $mahasiswa->original_berkas = $validatedData['original_berkas'];
-        $mahasiswa->status_ajuan = 'Telah Diajukan';
+        $mahasiswa->status_ajuan_id = 2;
     
-        // Attempt to save the Mahasiswa model
         if ($mahasiswa->save()) {
-            // Redirect to a desired route with a success message
-            return redirect()->route('registrasi')->with('success', 'Registration successful!');
+            return redirect()->route('hasil')->with('success', 'Registration successful!');
         } else {
-            // Handle save failure
             return back()->withErrors(['save' => 'Failed to save the data. Please try again.']);
         }
-    }
-    
+    } 
     
 }
