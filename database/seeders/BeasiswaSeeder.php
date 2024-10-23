@@ -14,26 +14,15 @@ class BeasiswaSeeder extends Seeder
      */
     public function run()
     {
-        Beasiswa::create([
-            'nama' => 'Beasiswa Akademik',
-        ]);
+        $namas = [
+            'Beasiswa Akademik',
+            'Beasiswa Non Akademik',
+            'Beasiswa Siswa Berprestasi',
+            'Beasiswa Keluarga Tidak Mampu',
+        ];
 
-        Beasiswa::create([
-            'nama' => 'Beasiswa Non Akademik',
-        ]);
-
-        Beasiswa::create([
-            'nama' => 'Beasiswa Prestasi',
-        ]);
-
-        Beasiswa::create([
-            'nama' => 'Beasiswa Siswa Berprestasi',
-        ]);
-
-        Beasiswa::create([
-            'nama' => 'Beasiswa Keluarga Tidak Mampu',
-        ]);
-
-        // Add more seeder entries as needed
+        foreach ($namas as $nama) {
+            Beasiswa::create(['nama' => $nama]);
+        }
     }
 }

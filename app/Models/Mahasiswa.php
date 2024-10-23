@@ -20,8 +20,8 @@ class Mahasiswa extends Authenticatable
         'semester',
         'ipk',
         'berkas_syarat',
-        'status_ajuan',
-        'beasiswa',
+        'beasiswa_id',
+        'status_ajuan_id',
     ];    
 
     protected $hidden = [
@@ -34,6 +34,11 @@ class Mahasiswa extends Authenticatable
 
     public function beasiswa()
     {
-        return $this->belongsTo(Beasiswa::class, 'beasiswa');
+        return $this->belongsTo(Beasiswa::class, 'beasiswa_id');
+    }
+
+    public function statusAjuan()
+    {
+        return $this->belongsTo(StatusAjuan::class, 'status_ajuan_id');
     }
 }

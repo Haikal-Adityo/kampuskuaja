@@ -15,6 +15,6 @@ class Beasiswa extends Model
 
     public function mahasiswa()
     {
-        return $this->hasMany(Mahasiswa::class, 'beasiswa');
+        return $this->hasMany(Mahasiswa::class, 'beasiswa_id');
     }
 }
