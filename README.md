@@ -37,16 +37,14 @@
 ## Fitur Utama
 
 * **Halaman Utama:**
-    * Pilihan jenis beasiswa (akademik, non-akademik, dll.)
-    * Daftar beasiswa yang tersedia
-    * Fitur untuk melihat status pengajuan beasiswa
+    * Login menggunakan NIM
 * **Formulir Pendaftaran:**
     * Pengisian data pribadi (nama, email, nomor HP, semester)
-    * Validasi data input (misal: format email, rentang nilai semester)
+    * Validasi data input
     * Unggah berkas persyaratan
     * Sistem evaluasi IPK otomatis
     * Disabilitas fitur tertentu berdasarkan nilai IPK
 * **Halaman Hasil Pengajuan:**
     * Tampilan detail data pendaftaran
-    * Informasi status pengajuan (belum diverifikasi, disetujui, ditolak)
+    * Informasi status pengajuan
 
