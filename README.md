@@ -47,4 +47,3 @@
 * **Halaman Hasil Pengajuan:**
     * Tampilan detail data pendaftaran
     * Informasi status pengajuan
-
