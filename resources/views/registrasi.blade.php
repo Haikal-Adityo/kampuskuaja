@@ -28,6 +28,11 @@
                         <hr class="border-t border-gray-400 mb-6">
 
                         <div class="mb-4 flex flex-col sm:flex-row">
+                            <label for="nama" class="block text-base font-medium text-gray-700 w-full sm:w-1/3">Masukan Nama</label>
+                            <input type="text" id="nama" name="nama" value="{{ $mahasiswa->nama }}" class="mt-1 block w-full sm:w-2/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                        </div>
+                        
+                        <div class="mb-4 flex flex-col sm:flex-row">
                             <label for="email" class="block text-base font-medium text-gray-700 w-full sm:w-1/3">Masukan Email</label>
                             <input type="email" id="email" name="email" value="{{ $mahasiswa->email }}" class="mt-1 block w-full sm:w-2/3 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
                         </div>

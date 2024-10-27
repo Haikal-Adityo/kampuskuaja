@@ -25,6 +25,7 @@ class RegistrasiBeasiswaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
+            'nama' => 'required|string',
             'email' => 'required|email',
             'nomor_hp' => 'required|numeric',
             'semester' => 'required|integer',
@@ -43,6 +44,7 @@ class RegistrasiBeasiswaController extends Controller
     
         $mahasiswa = Auth::user();
     
+        $mahasiswa->nama = $validatedData['nama'];
         $mahasiswa->email = $validatedData['email'];
         $mahasiswa->nomor_hp = $validatedData['nomor_hp'];
         $mahasiswa->semester = $validatedData['semester'];

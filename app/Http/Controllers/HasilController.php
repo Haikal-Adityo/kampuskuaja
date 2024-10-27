@@ -10,7 +10,7 @@ class HasilController extends Controller
 {
     public function index()
     {
-        $mahasiswa = Auth::user()->load('beasiswa');
+        $mahasiswa = Auth::user();
 
         return view('hasil', compact('mahasiswa'));
     }
